@@ -58,7 +58,11 @@ export default function App() {
       {array.map((item) => {
         if (item.statu) {
           return (
-            <div className={`app-container ${item.condition}-background`}>
+            <div
+              className={`app-container ${
+                item.condition.at(0).toLowerCase() + item.condition.slice(1)
+              }-background`}
+            >
               <div className="weather-container" key={item.id}>
                 <div className="icon">
                   {item.condition === 'Güneşli'
